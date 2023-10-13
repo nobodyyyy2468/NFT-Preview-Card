@@ -1,0 +1,153 @@
+:root {
+  --bg-color: hsl(217, 54%, 11%);
+  --card-bg-color: hsl(216, 50%, 16%);
+  --White: hsl(0, 0%, 100%);
+  --summary-dark-blue: hsl(215, 32%, 27%);
+
+  --price-cyan: hsl(178, 100%, 50%);
+  --text-soft-blue: hsl(215, 51%, 70%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 10%;
+  min-width: 280px;
+  height: auto;
+  background-color: var(--card-bg-color);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+}
+/* Add On*/
+.main .image {
+  position: relative;
+  margin-bottom: 15px;
+}
+.main .image .hover-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99%;
+  height: 88%;
+  border-radius: 15px;
+  background-color: var(--price-cyan);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s;
+}
+
+.main .image .hover-layer img {
+  max-width: 20%;
+  max-height: 20%;
+}
+
+.main .image:hover .hover-layer {
+  opacity: 0.75;
+}
+.main .image:hover .asset-name {
+  color: var(--price-cyan);
+}
+
+/* Add On*/
+.main .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.main .info {
+  display: grid;
+  grid-template: repeat(3, 1fr) / 1fr;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.asset-name {
+  color: var(--White);
+}
+.summary p {
+  color: var(--text-soft-blue);
+  font-size: 15px;
+  padding-right: 10px;
+  line-height: 1.3;
+}
+.price-time-div {
+  display: flex;
+}
+.price-time-div .price {
+  display: flex;
+  width: 175px;
+  align-items: center;
+}
+.price-time-div .price img {
+  width: 8px;
+  padding-right: 5px;
+}
+.price-time-div .price p {
+  font-size: 14px;
+}
+
+.price-time-div .amount {
+  color: var(--price-cyan);
+}
+
+.price-time-div .time-left {
+  width: 1fr;
+  color: var(--text-soft-blue);
+  display: flex;
+  align-items: flex-start;
+}
+.price-time-div .time-left img {
+  padding-right: 4px;
+  width: 15px;
+}
+.price-time-div .time-left p {
+  font-size: 14px;
+}
+.owner {
+  display: flex;
+  border-top: 1px solid var(--text-soft-blue);
+  padding-top: 14px;
+  align-items: center;
+}
+.owner .dp {
+  display: flex;
+  padding-right: 10px;
+}
+.owner .dp img {
+  width: 25px;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.owner .owner-name p {
+  color: var(--text-soft-blue);
+  font-size: 14px;
+  letter-spacing: 0.6px;
+}
+.owner .owner-name .creator-name {
+  color: var(--White);
+  font-size: 14px;
+}
