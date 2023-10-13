@@ -41,6 +41,7 @@ body {
 .main .image {
   position: relative;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 .main .image .hover-layer {
   position: absolute;
